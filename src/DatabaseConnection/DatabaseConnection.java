@@ -10,7 +10,7 @@ import java.sql.Connection;
 import java.util.Properties;
 
 public class DatabaseConnection {
-    private static final String PROP_FILE = "config/database.settings";
+    private static final String PROP_FILE = "config/config.settings";
     private SQLServerDataSource ds;
 
     public DatabaseConnection() throws IOException {
@@ -33,7 +33,6 @@ public class DatabaseConnection {
     }
 
     public Connection getConnection() throws SQLServerException {
-        System.out.println("Connection succesfully established");
         return ds.getConnection();
     }
 

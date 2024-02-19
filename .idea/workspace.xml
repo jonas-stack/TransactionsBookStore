@@ -4,20 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a889fe1-9232-433b-aff0-44f64db41acb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/microsoft_sqlserver_mssql_jdbc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Transactions Examples.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/createDB_Books.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/database.settings" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BookPurchaseExample/JonhDoeBookPurchaseExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DatabaseConnection/DatabaseConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    <list default="true" id="3a889fe1-9232-433b-aff0-44f64db41acb" name="Changes" comment="made a simple bookstore, to try my hand at simple transactions in java.">
+      <change afterPath="$PROJECT_DIR$/src/BookPurchaseExample/JohnDoeBookPurchaseExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BookPurchaseExample/JonhDoeBookPurchaseExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DatabaseConnection/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DatabaseConnection/DatabaseConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,11 +94,27 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1708378392278</updated>
-      <workItem from="1708378393469" duration="2531000" />
+      <workItem from="1708378393469" duration="4250000" />
     </task>
+    <task id="LOCAL-00001" summary="made a simple bookstore, to try my hand at simple transactions in java.">
+      <option name="closed" value="true" />
+      <created>1708381418555</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1708381418555</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.settings" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="made a simple bookstore, to try my hand at simple transactions in java." />
+    <option name="LAST_COMMIT_MESSAGE" value="made a simple bookstore, to try my hand at simple transactions in java." />
   </component>
 </project>
