@@ -18,7 +18,17 @@ public class JohnDoeBookPurchaseExample {
 
             int bookId = 1; // Example ID for "Harry Potter and the Philosopher's Stone"
             int customerId = 1; // Example ID for "John Doe"
-            double bookPrice = checkInventoryAndGetPrice(con, bookId);
+
+            // Check inventory and get price
+            double bookPrice = checkInventoryAndGetPrice(con, bookId); // This already checks for quantity
+
+            // Check if customer has enough balance
+            double customerBalance = checkCustomerBalance(con, customerId);
+            if (customerBalance < bookPrice) {
+                throw new Exception("Customer does not have enough money.");
+            }
+
+            // Process payment and update inventory
             processPayment(con, customerId, bookPrice);
             updateInventory(con, bookId);
 
@@ -26,11 +36,9 @@ public class JohnDoeBookPurchaseExample {
             System.out.println("Purchase successful, transaction committed.");
         } catch (SQLException ex) {
             System.err.println("SQL error occurred: " + ex.getMessage());
-            ex.printStackTrace();
             tryRollback(con);
         } catch (Exception e) {
             System.err.println("Purchase failed: " + e.getMessage());
-            e.printStackTrace();
             tryRollback(con);
         } finally {
             if (con != null) {
@@ -39,6 +47,20 @@ public class JohnDoeBookPurchaseExample {
                     con.close(); // Ensure connection is closed
                 } catch (SQLException ex) {
                     System.err.println("Failed to re-enable auto-commit or close connection: " + ex.getMessage());
+                }
+            }
+        }
+    }
+
+    private static double checkCustomerBalance(Connection con, int customerId) throws SQLException, Exception {
+        String sql = "SELECT balance FROM customers WHERE customer_id = ?";
+        try (PreparedStatement stmt = con.prepareStatement(sql)) {
+            stmt.setInt(1, customerId);
+            try (ResultSet rs = stmt.executeQuery()) {
+                if (rs.next()) {
+                    return rs.getDouble("balance");
+                } else {
+                    throw new Exception("Customer not found.");
                 }
             }
         }
